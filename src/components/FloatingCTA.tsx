@@ -32,7 +32,7 @@ export const FloatingCTA = () => {
           initial={{ opacity: 0, scale: 0, x: 100 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           exit={{ opacity: 0, scale: 0, x: 100 }}
-          className="fixed bottom-6 right-6 z-50"
+          className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50"
         >
           <div className="relative">
             {/* Dismiss Button */}
@@ -62,9 +62,9 @@ export const FloatingCTA = () => {
                   ease: "easeInOut",
                 },
               }}
-              className="glass px-6 py-4 rounded-full flex items-center gap-3 bg-primary/20 border-2 border-primary/50 hover:border-primary transition-all group"
+              className="glass px-4 py-3 md:px-6 md:py-4 rounded-full flex items-center gap-2 md:gap-3 bg-primary/20 border-2 border-primary/50 hover:border-primary transition-all group"
             >
-              <span className="font-semibold text-primary">Join Now</span>
+              <span className="font-semibold text-primary text-sm md:text-base">Chat Now</span>
               <motion.div
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}

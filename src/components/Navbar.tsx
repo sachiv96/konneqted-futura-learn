@@ -10,7 +10,6 @@ const navLinks = [
   { name: "Contest", href: "#contest" },
   { name: "Pricing", href: "#pricing" },
   { name: "Contact", href: "#contact" },
-  { name: "AI Bot", href: "#ai-bot" },
 ];
 
 export const Navbar = () => {

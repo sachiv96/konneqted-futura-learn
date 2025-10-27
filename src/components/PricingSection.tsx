@@ -40,12 +40,12 @@ export const PricingSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16 px-4"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
             Simple <span className="gradient-text">Pricing</span> for Schools
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Everything your school needs to modernize computer education — all-inclusive, transparent pricing
           </p>
         </motion.div>
@@ -70,12 +70,12 @@ export const PricingSection = () => {
               </div>
             </motion.div>
 
-            <div className="text-center mb-8 pt-4">
-              <h3 className="text-2xl font-bold mb-4">Complete School Package</h3>
+            <div className="text-center mb-6 md:mb-8 pt-4">
+              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Complete School Package</h3>
               
               <div className="flex items-baseline justify-center gap-2 mb-2">
-                <span className="text-5xl md:text-6xl font-bold gradient-text">₹9,999</span>
-                <span className="text-xl text-muted-foreground">/month</span>
+                <span className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text">₹9,999</span>
+                <span className="text-lg md:text-xl text-muted-foreground">/month</span>
               </div>
               
               <p className="text-sm text-muted-foreground">per school · billed monthly</p>
@@ -107,7 +107,7 @@ export const PricingSection = () => {
             >
               <Button
                 size="lg"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground glow-cyan text-lg py-6 font-semibold"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground glow-cyan text-base md:text-lg py-5 md:py-6 font-semibold"
               >
                 Join the Future of Learning
               </Button>

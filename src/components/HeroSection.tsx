@@ -48,7 +48,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 leading-tight px-4"
           >
             Redefining{" "}
             <span className="gradient-text">Computer Education</span>
@@ -61,7 +61,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-4"
           >
             From outdated lessons to futuristic learning. Empowering schools with AI-driven education, live coding sessions, and government-recognized certifications.
           </motion.p>
@@ -75,14 +75,14 @@ export const HeroSection = () => {
           >
             <Button
               size="lg"
-              className="glass glow-cyan hover:glow-cyan hover:scale-105 transition-all text-primary-foreground font-semibold text-lg px-8 py-6 bg-primary hover:bg-primary/90"
+              className="glass glow-cyan hover:glow-cyan hover:scale-105 transition-all text-primary-foreground font-semibold text-base md:text-lg px-6 md:px-8 py-5 md:py-6 bg-primary hover:bg-primary/90 w-full sm:w-auto"
             >
               Partner with Us
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="glass border-primary/50 hover:border-primary hover:bg-primary/10 text-lg px-8 py-6"
+              className="glass border-primary/50 hover:border-primary hover:bg-primary/10 text-base md:text-lg px-6 md:px-8 py-5 md:py-6 w-full sm:w-auto"
             >
               Watch Demo
             </Button>
@@ -93,7 +93,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto"
+            className="grid grid-cols-3 gap-4 md:gap-8 mt-12 md:mt-16 max-w-2xl mx-auto px-4"
           >
             {[
               { value: "50+", label: "Partner Schools" },
@@ -101,10 +101,10 @@ export const HeroSection = () => {
               { value: "100+", label: "Certificates Issued" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text mb-1 md:mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </motion.div>

@@ -9,6 +9,7 @@ import { CertificationSection } from "@/components/CertificationSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { TrustedSection } from "@/components/TrustedSection";
 import { PricingSection } from "@/components/PricingSection";
+import { TerminalSection } from "@/components/TerminalSection";
 import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
 
@@ -26,6 +27,7 @@ const Index = () => {
       <TestimonialsSection />
       <TrustedSection />
       <PricingSection />
+      <TerminalSection />
       <Footer />
       <FloatingCTA />
     </div>

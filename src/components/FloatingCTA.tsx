@@ -45,7 +45,7 @@ export const FloatingCTA = () => {
 
             {/* Main CTA Button */}
             <motion.a
-              href="#pricing"
+              href="#ai-bot"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               animate={{

@@ -62,11 +62,11 @@ export const PricingSection = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="absolute -top-4 left-1/2 -translate-x-1/2"
+              className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 w-auto z-10"
             >
-              <div className="flex items-center gap-2 bg-accent px-4 py-2 rounded-full glow-pink">
-                <Sparkles className="w-4 h-4 text-white" />
-                <span className="text-sm font-bold text-white">MOST POPULAR</span>
+              <div className="flex items-center gap-1.5 sm:gap-2 bg-accent px-3 sm:px-4 py-1.5 sm:py-2 rounded-full glow-pink whitespace-nowrap">
+                <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-bold text-white">MOST POPULAR</span>
               </div>
             </motion.div>
 

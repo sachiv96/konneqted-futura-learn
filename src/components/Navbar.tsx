@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -81,38 +79,100 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Toggle - Unique Animated Design */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground p-2"
+            className="md:hidden relative w-10 h-10 flex items-center justify-center group"
+            aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            <div className="relative w-6 h-5 flex flex-col justify-between">
+              {/* Top Line */}
+              <motion.span
+                animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="w-full h-0.5 bg-primary rounded-full glow-cyan origin-center"
+              />
+              {/* Middle Line */}
+              <motion.span
+                animate={isOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className="w-full h-0.5 bg-primary rounded-full glow-cyan"
+              />
+              {/* Bottom Line */}
+              <motion.span
+                animate={isOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="w-full h-0.5 bg-primary rounded-full glow-cyan origin-center"
+              />
+            </div>
+            
+            {/* Animated Circle Background */}
+            <motion.div
+              animate={isOpen ? { scale: 1.2, opacity: 0.3 } : { scale: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="absolute inset-0 rounded-full bg-primary/20 blur-sm"
+            />
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Full Screen Overlay */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden glass mt-4 overflow-hidden"
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "100%" }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="md:hidden fixed inset-0 top-20 glass backdrop-blur-2xl z-40"
             >
-              <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
-                {navLinks.map((link) => (
-                  <a
+              {/* Animated Background Gradient */}
+              <motion.div
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                }}
+                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 opacity-30"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(135deg, hsl(190 100% 50% / 0.2) 0%, hsl(280 80% 60% / 0.2) 50%, hsl(190 100% 50% / 0.2) 100%)",
+                  backgroundSize: "200% 200%",
+                }}
+              />
+              
+              <div className="container mx-auto px-8 py-12 flex flex-col gap-2 relative z-10">
+                {navLinks.map((link, index) => (
+                  <motion.a
                     key={link.name}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className={`text-lg font-medium transition-colors hover:text-primary ${
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1, duration: 0.3 }}
+                    whileHover={{ scale: 1.05, x: 10 }}
+                    className={`text-2xl font-bold py-4 px-6 rounded-xl transition-all relative overflow-hidden group ${
                       activeSection === link.href.substring(1)
-                        ? "text-primary"
-                        : "text-foreground/80"
+                        ? "text-primary bg-primary/10"
+                        : "text-foreground/80 hover:text-primary"
                     }`}
                   >
-                    {link.name}
-                  </a>
+                    {/* Hover Effect Background */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5"
+                      initial={{ x: "-100%" }}
+                      whileHover={{ x: 0 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                    
+                    {/* Active Indicator */}
+                    {activeSection === link.href.substring(1) && (
+                      <motion.div
+                        layoutId="mobileActiveSection"
+                        className="absolute left-0 top-0 bottom-0 w-1 bg-primary glow-cyan"
+                      />
+                    )}
+                    
+                    <span className="relative z-10">{link.name}</span>
+                  </motion.a>
                 ))}
               </div>
             </motion.div>

@@ -6,7 +6,6 @@ import { ComingSoonSection } from "@/components/ComingSoonSection";
 import { ContestSection } from "@/components/ContestSection";
 import { CommunitySection } from "@/components/CommunitySection";
 import { CertificationSection } from "@/components/CertificationSection";
-import { AIBotSection } from "@/components/AIBotSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { TrustedSection } from "@/components/TrustedSection";
 import { PricingSection } from "@/components/PricingSection";
@@ -24,7 +23,6 @@ const Index = () => {
       <ContestSection />
       <CommunitySection />
       <CertificationSection />
-      <AIBotSection />
       <TestimonialsSection />
       <TrustedSection />
       <PricingSection />

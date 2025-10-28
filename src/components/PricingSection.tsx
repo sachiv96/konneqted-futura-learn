@@ -108,8 +108,11 @@ export const PricingSection = () => {
               <Button
                 size="lg"
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground glow-cyan text-base md:text-lg py-5 md:py-6 font-semibold"
+                asChild
               >
-                Join the Future of Learning
+                <a href="https://wa.me/918709618912" target="_blank" rel="noopener noreferrer">
+                  Join the Future of Learning
+                </a>
               </Button>
             </motion.div>
 
@@ -142,7 +145,12 @@ export const PricingSection = () => {
           <p className="text-muted-foreground mb-4">
             Need a custom plan for multiple schools or districts?
           </p>
-          <a href="#contact" className="text-primary hover:underline font-semibold">
+          <a 
+            href="https://wa.me/918709618912" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-primary hover:underline font-semibold"
+          >
             Contact us for enterprise pricing →
           </a>
         </motion.div>

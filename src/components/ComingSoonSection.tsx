@@ -113,7 +113,12 @@ export const ComingSoonSection = () => {
         >
           <p className="text-lg text-muted-foreground">
             Want to be the first to know?{" "}
-            <a href="#contact" className="text-primary hover:underline font-semibold">
+            <a 
+              href="https://wa.me/918709618912" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-semibold"
+            >
               Join our waitlist
             </a>
           </p>

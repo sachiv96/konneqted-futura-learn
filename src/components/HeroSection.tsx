@@ -76,8 +76,11 @@ export const HeroSection = () => {
             <Button
               size="lg"
               className="glass glow-cyan hover:glow-cyan hover:scale-105 transition-all text-primary-foreground font-semibold text-base md:text-lg px-6 md:px-8 py-5 md:py-6 bg-primary hover:bg-primary/90 w-full sm:w-auto"
+              asChild
             >
-              Partner with Us
+              <a href="https://wa.me/918709618912" target="_blank" rel="noopener noreferrer">
+                Partner with Us
+              </a>
             </Button>
             <Button
               size="lg"

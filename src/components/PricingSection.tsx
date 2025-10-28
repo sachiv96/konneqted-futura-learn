@@ -54,9 +54,9 @@ export const PricingSection = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="max-w-2xl mx-auto"
+          className="max-w-2xl mx-auto pt-8 px-4"
         >
-          <div className="glass rounded-3xl p-8 md:p-12 glow-cyan border-2 border-primary/30 relative overflow-hidden">
+          <div className="glass rounded-3xl p-8 md:p-12 glow-cyan border-2 border-primary/30 relative">
             {/* Popular Badge */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
